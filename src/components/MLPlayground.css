@@ -34,6 +34,13 @@
   color: var(--bg-deep);
 }
 
+.ml-tab-btn-active:hover,
+.ml-tab-btn-active:focus {
+  color: var(--bg-deep) !important;
+  background: var(--text-primary) !important;
+  border-color: var(--text-primary) !important;
+}
+
 /* Playground Layout */
 .ml-playground-container {
   padding: 20px;

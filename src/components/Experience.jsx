@@ -1,9 +1,21 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Briefcase, Calendar, Users, Award, Hammer } from 'lucide-react';
+import { Briefcase, Calendar, Users, Award, Hammer, GraduationCap } from 'lucide-react';
 import './Experience.css';
 
 const experiences = [
+  {
+    role: 'Asesor de Investigación Científica & ML (Freelance)',
+    company: 'Asesoría y Consultoría Científica',
+    period: '2025 - Presente',
+    type: 'Investigación y Desarrollo',
+    icon: <GraduationCap className="exp-icon" />,
+    bullets: [
+      'Asesoro a estudiantes universitarios y de posgrado en el desarrollo, redacción y estructuración metodológica de artículos científicos, tesis de grado e investigaciones académicas.',
+      'Brindo reforzamiento y capacitación especializada en programación orientada a Machine Learning (aprendizaje automático), análisis estadístico de datos y formulación/validación de pruebas de hipótesis estadísticas.',
+      'Enseño metodologías de ciencia de datos aplicadas a la investigación científica, facilitando la comprensión práctica de algoritmos y modelamiento predictivo.'
+    ]
+  },
   {
     role: 'Operador de Laboratorio de Fabricación Digital',
     company: 'FabLab Universidad Continental, Cusco',

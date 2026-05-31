@@ -14,7 +14,7 @@ const accomplishments = [
     title: 'Reconocimiento a la Excelencia Académica',
     institution: 'Instituto de Educación Superior KHIPU',
     year: '2021',
-    desc: 'Primer puesto de la promoción en la carrera de Desarrollo de Sistemas de Información, destacando por capacidad estructurada de resolución de problemas.'
+    desc: 'Reconocimiento por Exelencia Académica en la carrera de Desarrollo de Sistemas de Información, destacando por capacidad estructurada de resolución de problemas.'
   }
 ];
 
@@ -95,8 +95,8 @@ const Certifications = () => {
   const [filter, setFilter] = useState('all');
   const [selectedCert, setSelectedCert] = useState(null);
 
-  const filteredCerts = filter === 'all' 
-    ? certsList 
+  const filteredCerts = filter === 'all'
+    ? certsList
     : certsList.filter(c => c.category === filter);
 
   return (
@@ -169,14 +169,14 @@ const Certifications = () => {
         {/* Detail Modal Overlay */}
         <AnimatePresence>
           {selectedCert && (
-            <motion.div 
+            <motion.div
               className="modal-overlay"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedCert(null)}
             >
-              <motion.div 
+              <motion.div
                 className="modal-content glass-panel"
                 initial={{ scale: 0.95, y: 15 }}
                 animate={{ scale: 1, y: 0 }}
