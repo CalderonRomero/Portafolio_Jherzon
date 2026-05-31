@@ -90,6 +90,13 @@
   color: var(--bg-deep);
 }
 
+.active-filter:hover,
+.active-filter:focus {
+  color: var(--bg-deep) !important;
+  background: var(--text-primary) !important;
+  border-color: var(--text-primary) !important;
+}
+
 /* Cert Grid */
 .certs-grid {
   display: grid;
