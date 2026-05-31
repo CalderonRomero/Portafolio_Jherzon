@@ -5,14 +5,15 @@ import { cnnModels } from '../utils/cnnSimData';
 import './CNNVisualizer.css';
 
 const getSampleImagePath = (type) => {
-  if (type === 'healthy-leaf') return '/images/healthy_potato_leaf.png';
-  if (type === 'tizon-leaf' || type === 'rust-leaf') return '/images/blight_potato_leaf.png';
-  if (type === 'mildew-leaf') return '/images/mildew_quinoa_leaf.png';
-  if (type === 'blurry-image' || type === 'blurry-leaf') return '/images/blurry_leaf.png';
-  if (type === 'benign-nevus' || type === 'benign') return '/images/benign_nevus.png';
-  if (type === 'malignant-melanoma' || type === 'malignant') return '/images/malignant_melanoma.png';
-  if (type === 'healthy-tooth') return '/images/healthy_tooth_xray.png';
-  if (type === 'caries-tooth' || type === 'active-caries') return '/images/caries_tooth_xray.png';
+  const base = import.meta.env.BASE_URL;
+  if (type === 'healthy-leaf') return `${base}images/healthy_potato_leaf.png`;
+  if (type === 'tizon-leaf' || type === 'rust-leaf') return `${base}images/blight_potato_leaf.png`;
+  if (type === 'mildew-leaf') return `${base}images/mildew_quinoa_leaf.png`;
+  if (type === 'blurry-image' || type === 'blurry-leaf') return `${base}images/blurry_leaf.png`;
+  if (type === 'benign-nevus' || type === 'benign') return `${base}images/benign_nevus.png`;
+  if (type === 'malignant-melanoma' || type === 'malignant') return `${base}images/malignant_melanoma.png`;
+  if (type === 'healthy-tooth') return `${base}images/healthy_tooth_xray.png`;
+  if (type === 'caries-tooth' || type === 'active-caries') return `${base}images/caries_tooth_xray.png`;
   return '';
 };
 

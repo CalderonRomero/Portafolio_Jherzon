@@ -60,7 +60,7 @@ const Contact = () => {
           clearInterval(interval);
           addLog('System: Transfer completed. Executing download.');
           const link = document.createElement('a');
-          link.href = '/CV-Yersson-Calderon.pdf';
+          link.href = `${import.meta.env.BASE_URL}CV-Yersson-Calderon.pdf`;
           link.download = 'CV-Yersson-Calderon.pdf';
           link.click();
         }

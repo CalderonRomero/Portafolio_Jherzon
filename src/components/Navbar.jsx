@@ -111,7 +111,7 @@ const Navbar = () => {
             <a href="https://www.linkedin.com/in/yersson-calderon-romero-456b8a222/" target="_blank" rel="noopener noreferrer" className="social-icon-btn" title="LinkedIn">
               <LinkedinIcon size={20} />
             </a>
-            <a href="/CV-Yersson-Calderon.pdf" download className="cv-download-btn">
+            <a href={`${import.meta.env.BASE_URL}CV-Yersson-Calderon.pdf`} download className="cv-download-btn">
               Download CV
             </a>
           </div>
@@ -150,7 +150,7 @@ const Navbar = () => {
               <a href="https://www.linkedin.com/in/yersson-calderon-romero-456b8a222/" target="_blank" rel="noopener noreferrer" className="mobile-social-btn">
                 <LinkedinIcon size={20} style={{ marginRight: '6px' }} /> LinkedIn
               </a>
-              <a href="/CV-Yersson-Calderon.pdf" download className="mobile-cv-btn">
+              <a href={`${import.meta.env.BASE_URL}CV-Yersson-Calderon.pdf`} download className="mobile-cv-btn">
                 Download CV
               </a>
             </div>
