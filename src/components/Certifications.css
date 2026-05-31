@@ -1,0 +1,259 @@
+.certs-section {
+  background-color: var(--bg-space);
+  border-bottom: 1px solid var(--accent-border);
+}
+
+/* Accomplishments */
+.accomplishments-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.acc-card {
+  padding: 20px;
+  text-align: left;
+  background: var(--bg-card);
+  border: 1px solid var(--accent-border);
+  border-radius: 6px;
+}
+
+.acc-icon-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.acc-icon {
+  color: var(--text-primary);
+}
+
+.acc-year {
+  font-size: 0.68rem;
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--text-secondary);
+  padding: 2px 6px;
+  border-radius: 3px;
+  border: 1px solid var(--accent-border);
+}
+
+.acc-title {
+  font-size: 1rem;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+}
+
+.acc-inst {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.acc-desc {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+/* Cert Filters */
+.certs-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.filter-btn {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--accent-border);
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.filter-btn:hover {
+  border-color: var(--accent-border-hover);
+  color: var(--text-primary);
+}
+
+.active-filter {
+  background: var(--text-primary);
+  border-color: var(--text-primary);
+  color: var(--bg-deep);
+}
+
+/* Cert Grid */
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.cert-card {
+  padding: 16px;
+  text-align: left;
+  cursor: pointer;
+  background: var(--bg-card);
+  border: 1px solid var(--accent-border);
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+}
+
+.cert-card:hover {
+  border-color: var(--accent-border-hover);
+}
+
+.cert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cert-tag {
+  color: var(--text-muted);
+}
+
+.cert-year {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+}
+
+.cert-title {
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.35;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+}
+
+.cert-inst {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.cert-click-hint {
+  font-size: 0.65rem;
+  color: var(--text-secondary);
+  text-align: right;
+  margin-top: 6px;
+  opacity: 0;
+  transition: var(--transition-fast);
+}
+
+.cert-card:hover .cert-click-hint {
+  opacity: 0.8;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+  padding: 20px;
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 440px;
+  padding: 24px;
+  background: var(--bg-terminal);
+  border: 1px solid var(--accent-border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  position: relative;
+  text-align: left;
+  border-radius: 6px;
+}
+
+.modal-header {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--accent-border);
+  padding-bottom: 12px;
+}
+
+.modal-check-icon {
+  color: var(--text-primary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.modal-year {
+  font-size: 0.68rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+  padding: 2px 6px;
+  border-radius: 2px;
+  margin-bottom: 4px;
+  display: inline-block;
+  border: 1px solid var(--accent-border);
+}
+
+.modal-header h3 {
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+
+.modal-header h4 {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.modal-body {
+  margin-bottom: 20px;
+}
+
+.modal-body h5 {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.modal-body p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Responsiveness */
+@media (max-width: 868px) {
+  .certs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .accomplishments-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+  .certs-grid {
+    grid-template-columns: 1fr;
+  }
+}

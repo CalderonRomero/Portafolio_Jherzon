@@ -1,0 +1,140 @@
+.skills-section {
+  background-color: var(--bg-deep);
+  border-bottom: 1px solid var(--accent-border);
+}
+
+.skills-wrapper {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.skills-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.category-card {
+  width: 100%;
+  padding: 14px 18px;
+  text-align: left;
+  cursor: pointer;
+  background: var(--bg-card);
+  border: 1px solid var(--accent-border);
+  border-radius: 6px;
+  transition: var(--transition-smooth);
+}
+
+.category-card:hover {
+  border-color: var(--accent-border-hover);
+}
+
+.cat-active {
+  border-color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.01);
+}
+
+.cat-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.cat-icon {
+  color: var(--text-primary);
+}
+
+.cat-header h3 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.cat-meta {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-secondary);
+}
+
+/* Details grid */
+.skills-grid-container {
+  padding: 20px 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--accent-border);
+  border-radius: 6px;
+}
+
+.skills-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.skill-progress-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+}
+
+.skill-meta-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-name {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.skill-level {
+  font-size: 0.62rem;
+}
+
+.skill-bar-track {
+  height: 3px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 1px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  border-radius: 1px;
+  background: var(--text-primary);
+}
+
+.skill-use {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  line-height: 1.25;
+}
+
+/* Responsiveness */
+@media (max-width: 868px) {
+  .skills-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .skills-sidebar {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .category-card {
+    flex: 1;
+    min-width: 220px;
+  }
+}
+@media (max-width: 640px) {
+  .skills-details-grid {
+    grid-template-columns: 1fr;
+  }
+  .skills-sidebar {
+    flex-direction: column;
+  }
+}
